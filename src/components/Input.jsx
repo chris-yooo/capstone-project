@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 
-export default function MessageInput() {
+export default function Input() {
   return (
     <>
       <Wrapper>
