@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Input from '../components/Input';
-import Chat from '../components/Messages';
+import Chat from '../components/Chat';
 
 export default function CHRAT() {
   return (

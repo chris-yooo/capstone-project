@@ -1,5 +1,5 @@
 export default function Chat() {
-  const Message = Messages.map(Message => <p key={Message.toString()}>{Message} </p>);
+  const Message = Messages.map(Message => <p key={Message.toString()}>{Message}</p>);
   return Message;
 }
 
