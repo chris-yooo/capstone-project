@@ -1,10 +1,16 @@
 import styled from 'styled-components';
+import {Icon} from '@iconify/react';
 
 export default function MessageInput() {
   return (
-    <Wrapper>
-      <InputStyled type="text" name="message" id="message"></InputStyled>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <InputStyled type="text" name="message" id="message" label="message input"></InputStyled>
+        <InputButton>
+          <Icon icon="carbon:send-alt" style={{fontSize: '28px'}} />
+        </InputButton>
+      </Wrapper>
+    </>
   );
 }
 
@@ -26,23 +32,24 @@ const Wrapper = styled.div`
 const InputStyled = styled.input`
   width: 100%;
   /* max-width: 500px; */
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding: 0.4rem;
+  padding-left: 0.8rem;
   color: white;
   background-color: rgba(0, 0, 0, 0);
   border: none;
 
   &:hover {
-    outline: 1px dotted #444;
+    outline: 1px dotted #d0d0d0;
   }
 
   &:focus {
-    outline: 1px dotted #444;
+    outline: 1px dotted #d0d0d0;
   }
 `;
 
-const Label = styled.label`
-  font-size: 0.8em;
-  color: #aaa;
-  margin-bottom: 4px;
+const InputButton = styled.button`
+  width: 100px;
+  border: none;
+  border-radius: 12px;
 `;

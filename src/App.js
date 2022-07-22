@@ -9,62 +9,87 @@ export default function App() {
           <h1>chRat</h1>
         </Header>
         <Main>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
-              laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores? Facilis odit quia obcaecati
-              nemo fugit qui dignissimos esse.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
-              laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores? Facilis odit quia obcaecati
-              nemo fugit qui dignissimos esse.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
-              laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores? Facilis odit quia obcaecati
-              nemo fugit qui dignissimos esse.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
-              laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores? Facilis odit quia obcaecati
-              nemo fugit qui dignissimos esse.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
-              laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores? Facilis odit quia obcaecati
-              nemo fugit qui dignissimos esse.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
-              laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores? Facilis odit quia obcaecati
-              nemo fugit qui dignissimos esse.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
-              laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores? Facilis odit quia obcaecati
-              nemo fugit qui dignissimos esse.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
-              laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores? Facilis odit quia obcaecati
-              nemo fugit qui dignissimos esse.
-            </p>
-          </article>
+          <p>HEY AVA ::PP</p>
+          <p>
+            Bavaria ipsum dolor sit amet Gstanzl Gschicht, glei auf der Oim, da gibt’s koa Sünd Spezi. Schuabladdla
+            unbandig woaß, Namidog: Breihaus bitt i moan scho aa, Sauakraud Haferl Schbozal a liabs Deandl koa
+            schnacksln Broadwurschtbudn hob i an Suri? Lem und lem lossn Weißwiaschd aasgem allerweil, gschmeidig wia da
+            Buachbinda Wanninger. Marterl nix nomoi gwihss! Gwiss des basd scho auf der Oim, da gibt’s koa Sünd griasd
+            eich midnand, vui von wuid Kuaschwanz sauba. Hawadere midananda vo de san in da Schbozal auf’d Schellnsau,
+            Marei soi mechad measi Sauwedda. Wurschtsolod Trachtnhuat Breihaus, Marei gwiss Prosd gwiss wia! Wo hi resch
+            Enzian umma. Hod mim mim Radl foahn nois oba Diandldrahn obandeln schaugn glei ma glacht! Wuid Schorsch i
+            moan scho aa sei liberalitas Bavariae nimma.
+          </p>
+          <p>
+            Bavaria ipsum dolor sit amet Gstanzl Gschicht, glei auf der Oim, da gibt’s koa Sünd Spezi. Schuabladdla
+            unbandig woaß, Namidog: Breihaus bitt i moan scho aa, Sauakraud Haferl Schbozal a liabs Deandl koa
+            schnacksln Broadwurschtbudn hob i an Suri? Lem und lem lossn Weißwiaschd aasgem allerweil, gschmeidig wia da
+            Buachbinda Wanninger. Marterl nix nomoi gwihss! Gwiss des basd scho auf der Oim, da gibt’s koa Sünd griasd
+            eich midnand, vui von wuid Kuaschwanz sauba. Hawadere midananda vo de san in da Schbozal auf’d Schellnsau,
+            Marei soi mechad measi Sauwedda. Wurschtsolod Trachtnhuat Breihaus, Marei gwiss Prosd gwiss wia! Wo hi resch
+            Enzian umma. Hod mim mim Radl foahn nois oba Diandldrahn obandeln schaugn glei ma glacht! Wuid Schorsch i
+            moan scho aa sei liberalitas Bavariae nimma.
+          </p>
+          <p>
+            Bavaria ipsum dolor sit amet Gstanzl Gschicht, glei auf der Oim, da gibt’s koa Sünd Spezi. Schuabladdla
+            unbandig woaß, Namidog: Breihaus bitt i moan scho aa, Sauakraud Haferl Schbozal a liabs Deandl koa
+            schnacksln Broadwurschtbudn hob i an Suri? Lem und lem lossn Weißwiaschd aasgem allerweil, gschmeidig wia da
+            Buachbinda Wanninger. Marterl nix nomoi gwihss! Gwiss des basd scho auf der Oim, da gibt’s koa Sünd griasd
+            eich midnand, vui von wuid Kuaschwanz sauba. Hawadere midananda vo de san in da Schbozal auf’d Schellnsau,
+            Marei soi mechad measi Sauwedda. Wurschtsolod Trachtnhuat Breihaus, Marei gwiss Prosd gwiss wia! Wo hi resch
+            Enzian umma. Hod mim mim Radl foahn nois oba Diandldrahn obandeln schaugn glei ma glacht! Wuid Schorsch i
+            moan scho aa sei liberalitas Bavariae nimma.
+          </p>
+          <p>
+            Bavaria ipsum dolor sit amet Gstanzl Gschicht, glei auf der Oim, da gibt’s koa Sünd Spezi. Schuabladdla
+            unbandig woaß, Namidog: Breihaus bitt i moan scho aa, Sauakraud Haferl Schbozal a liabs Deandl koa
+            schnacksln Broadwurschtbudn hob i an Suri? Lem und lem lossn Weißwiaschd aasgem allerweil, gschmeidig wia da
+            Buachbinda Wanninger. Marterl nix nomoi gwihss! Gwiss des basd scho auf der Oim, da gibt’s koa Sünd griasd
+            eich midnand, vui von wuid Kuaschwanz sauba. Hawadere midananda vo de san in da Schbozal auf’d Schellnsau,
+            Marei soi mechad measi Sauwedda. Wurschtsolod Trachtnhuat Breihaus, Marei gwiss Prosd gwiss wia! Wo hi resch
+            Enzian umma. Hod mim mim Radl foahn nois oba Diandldrahn obandeln schaugn glei ma glacht! Wuid Schorsch i
+            moan scho aa sei liberalitas Bavariae nimma.
+          </p>
+          <p>
+            Bavaria ipsum dolor sit amet Gstanzl Gschicht, glei auf der Oim, da gibt’s koa Sünd Spezi. Schuabladdla
+            unbandig woaß, Namidog: Breihaus bitt i moan scho aa, Sauakraud Haferl Schbozal a liabs Deandl koa
+            schnacksln Broadwurschtbudn hob i an Suri? Lem und lem lossn Weißwiaschd aasgem allerweil, gschmeidig wia da
+            Buachbinda Wanninger. Marterl nix nomoi gwihss! Gwiss des basd scho auf der Oim, da gibt’s koa Sünd griasd
+            eich midnand, vui von wuid Kuaschwanz sauba. Hawadere midananda vo de san in da Schbozal auf’d Schellnsau,
+            Marei soi mechad measi Sauwedda. Wurschtsolod Trachtnhuat Breihaus, Marei gwiss Prosd gwiss wia! Wo hi resch
+            Enzian umma. Hod mim mim Radl foahn nois oba Diandldrahn obandeln schaugn glei ma glacht! Wuid Schorsch i
+            moan scho aa sei liberalitas Bavariae nimma.
+          </p>
+          <p>
+            Bavaria ipsum dolor sit amet Gstanzl Gschicht, glei auf der Oim, da gibt’s koa Sünd Spezi. Schuabladdla
+            unbandig woaß, Namidog: Breihaus bitt i moan scho aa, Sauakraud Haferl Schbozal a liabs Deandl koa
+            schnacksln Broadwurschtbudn hob i an Suri? Lem und lem lossn Weißwiaschd aasgem allerweil, gschmeidig wia da
+            Buachbinda Wanninger. Marterl nix nomoi gwihss! Gwiss des basd scho auf der Oim, da gibt’s koa Sünd griasd
+            eich midnand, vui von wuid Kuaschwanz sauba. Hawadere midananda vo de san in da Schbozal auf’d Schellnsau,
+            Marei soi mechad measi Sauwedda. Wurschtsolod Trachtnhuat Breihaus, Marei gwiss Prosd gwiss wia! Wo hi resch
+            Enzian umma. Hod mim mim Radl foahn nois oba Diandldrahn obandeln schaugn glei ma glacht! Wuid Schorsch i
+            moan scho aa sei liberalitas Bavariae nimma.
+          </p>
+          <p>
+            Bavaria ipsum dolor sit amet Gstanzl Gschicht, glei auf der Oim, da gibt’s koa Sünd Spezi. Schuabladdla
+            unbandig woaß, Namidog: Breihaus bitt i moan scho aa, Sauakraud Haferl Schbozal a liabs Deandl koa
+            schnacksln Broadwurschtbudn hob i an Suri? Lem und lem lossn Weißwiaschd aasgem allerweil, gschmeidig wia da
+            Buachbinda Wanninger. Marterl nix nomoi gwihss! Gwiss des basd scho auf der Oim, da gibt’s koa Sünd griasd
+            eich midnand, vui von wuid Kuaschwanz sauba. Hawadere midananda vo de san in da Schbozal auf’d Schellnsau,
+            Marei soi mechad measi Sauwedda. Wurschtsolod Trachtnhuat Breihaus, Marei gwiss Prosd gwiss wia! Wo hi resch
+            Enzian umma. Hod mim mim Radl foahn nois oba Diandldrahn obandeln schaugn glei ma glacht! Wuid Schorsch i
+            moan scho aa sei liberalitas Bavariae nimma.
+          </p>
+          <p>
+            Bavaria ipsum dolor sit amet Gstanzl Gschicht, glei auf der Oim, da gibt’s koa Sünd Spezi. Schuabladdla
+            unbandig woaß, Namidog: Breihaus bitt i moan scho aa, Sauakraud Haferl Schbozal a liabs Deandl koa
+            schnacksln Broadwurschtbudn hob i an Suri? Lem und lem lossn Weißwiaschd aasgem allerweil, gschmeidig wia da
+            Buachbinda Wanninger. Marterl nix nomoi gwihss! Gwiss des basd scho auf der Oim, da gibt’s koa Sünd griasd
+            eich midnand, vui von wuid Kuaschwanz sauba. Hawadere midananda vo de san in da Schbozal auf’d Schellnsau,
+            Marei soi mechad measi Sauwedda. Wurschtsolod Trachtnhuat Breihaus, Marei gwiss Prosd gwiss wia! Wo hi resch
+            Enzian umma. Hod mim mim Radl foahn nois oba Diandldrahn obandeln schaugn glei ma glacht! Wuid Schorsch i
+            moan scho aa sei liberalitas Bavariae nimma.
+          </p>
         </Main>
         <MessageInput></MessageInput>
       </ChratBody>
@@ -98,11 +123,12 @@ const Header = styled.header`
 
 const Main = styled.main`
   width: 375px;
-  height: 475px;
+  /* height: 475px; */
+  height: 550px;
   overflow-y: scroll;
-  /* overflow-x: scroll; */
   p {
     margin: 20px;
+    margin-top: 0px;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
