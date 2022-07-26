@@ -6,11 +6,12 @@ export default function Input({addNewMessage}) {
     e.preventDefault();
     const inputValue = e.target.elements[0].value;
     addNewMessage(inputValue);
+    document.getElementById('deleteForm').reset();
   }
 
   return (
     <Wrapper>
-      <InputForm onSubmit={handleOnSubmit}>
+      <InputForm onSubmit={handleOnSubmit} id="deleteForm">
         <InputStyled autoComplete="off" type="text" name="message" id="message" label="message input"></InputStyled>
         <InputButton type="submit" id="sendMessage">
           <Icon icon="carbon:send-alt" style={{fontSize: '28px'}} />
