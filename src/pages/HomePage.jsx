@@ -2,17 +2,19 @@ import styled from 'styled-components';
 import Input from '../components/Input';
 import Chat from '../components/Chat';
 
-export default function CHRAT() {
+export default function CHRAT({messages, addNewMessage}) {
   return (
     <>
       <ChratBody>
         <Header>
           <h1>chRat</h1>
         </Header>
-        <Main>
-          <Chat />
+        <Main id={'mainChat'}>
+          <Chat messages={messages}></Chat>
+          {/* {window.scrollTo(0, document.body.scrollHeight)} */}
         </Main>
-        <Input />
+        <Input addNewMessage={addNewMessage} />
+        {$('#mainChat').scrollTop($('#mainChat')[0].scrollHeight)}
       </ChratBody>
     </>
   );
