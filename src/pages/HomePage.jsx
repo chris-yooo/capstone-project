@@ -14,7 +14,7 @@ export default function CHRAT({messages, addNewMessage}) {
           <h1>chRat</h1>
         </Header>
         <Main id={'mainChat'}>
-          <Chat messages={messages} goToScrollDown={goToScrollDown}></Chat>
+          <Chat messages={messages} goToScrollDown={goToScrollDown} />
           {/* {window.scrollTo(0, document.body.scrollHeight)} */}
         </Main>
         <Input addNewMessage={addNewMessage} />
@@ -42,23 +42,25 @@ const Header = styled.header`
     font-weight: 400;
     font-size: 4rem;
     text-align: center;
-    color: #ffffff;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   }
 `;
 
 const Main = styled.main`
   width: 375px;
+
   /* height: 475px; */
+
   height: 550px;
   overflow-y: scroll;
   p {
     margin: 20px;
-    margin-top: 0px;
+    margin-top: 0;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
-    color: #ffffff;
+    color: #fff;
   }
 `;

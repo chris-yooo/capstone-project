@@ -23,7 +23,7 @@ export default function Input({addNewMessage}) {
 const Wrapper = styled.div`
   text-align: left;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 346px;
   height: 45px;
   background: #d9d9d9;
@@ -35,6 +35,8 @@ const Wrapper = styled.div`
 
 const InputForm = styled.form`
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 const InputStyled = styled.input`
@@ -47,16 +49,16 @@ const InputStyled = styled.input`
   border: none;
 
   &:hover {
-    outline: 1px dotted #d0d0d0;
-  }
-
-  &:focus {
-    outline: 1px dotted #d0d0d0;
+    outline: 1px solid #0060df;
   }
 `;
 
 const InputButton = styled.button`
-  width: 100px;
+  width: 7rem;
   border: none;
   border-radius: 12px;
+
+  &:hover {
+    outline: 1px solid #0060df;
+  }
 `;

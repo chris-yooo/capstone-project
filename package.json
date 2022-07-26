@@ -9,7 +9,7 @@
     "jest": "react-scripts test --watchAll=false --passWithNoTests",
     "jest:watch": "react-scripts test --watchAll",
     "lint": "npm run eslint && npm run stylelint",
-    "eslint": "eslint '**/*.{js,jsx}'",
+    "eslint": "eslint \"**/*.{js,jsx}\"",
     "eslint:fix": "npm run eslint -- --fix",
     "prepare": "npx husky install",
     "stylelint": "npx stylelint src/{**/*,*}.{css,js,jsx}",
