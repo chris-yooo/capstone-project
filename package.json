@@ -19,6 +19,7 @@
     "test": "npm run test:unit"
   },
   "dependencies": {
+    "jquery": "^3.6.0",
     "mongoose": "^6.4.0",
     "nanoid": "^4.0.0",
     "react": "18.1.0",

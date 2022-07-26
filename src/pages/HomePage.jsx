@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Input from '../components/Input';
 import Chat from '../components/Chat';
+import $ from 'jquery';
 
 export default function CHRAT({messages, addNewMessage}) {
   return (
