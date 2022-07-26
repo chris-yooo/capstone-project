@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   width: 346px;
   height: 45px;
   background: #d9d9d9;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -39,7 +39,6 @@ const InputForm = styled.form`
 
 const InputStyled = styled.input`
   width: 100%;
-  /* max-width: 500px; */
   font-size: 2rem;
   padding: 0.4rem;
   padding-left: 0.8rem;
