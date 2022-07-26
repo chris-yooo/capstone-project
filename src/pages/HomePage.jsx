@@ -4,6 +4,9 @@ import Chat from '../components/Chat';
 import $ from 'jquery';
 
 export default function CHRAT({messages, addNewMessage}) {
+  function goToScrollDown() {
+    $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);
+  }
   return (
     <>
       <ChratBody>
@@ -11,11 +14,10 @@ export default function CHRAT({messages, addNewMessage}) {
           <h1>chRat</h1>
         </Header>
         <Main id={'mainChat'}>
-          <Chat messages={messages}></Chat>
+          <Chat messages={messages} goToScrollDown={goToScrollDown}></Chat>
           {/* {window.scrollTo(0, document.body.scrollHeight)} */}
         </Main>
         <Input addNewMessage={addNewMessage} />
-        {$('#mainChat').scrollTop($('#mainChat')[0].scrollHeight)}
       </ChratBody>
     </>
   );
