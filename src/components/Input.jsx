@@ -2,15 +2,6 @@ import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 
 export default function Input({addNewMessage}) {
-  // let messageInput = {message: 'lol'};
-  // function handleMessageSubmit(messageInput) {
-  //   messageInput.forEach(each => {
-  //     localStorage.setItem(each.message);
-  //     document.getElementById('sendMessage').value = each.message;
-  //     console.los(Input);
-  //   });
-  // }
-
   function handleOnSubmit(e) {
     e.preventDefault();
     const inputValue = e.target.elements[0].value;
@@ -18,21 +9,16 @@ export default function Input({addNewMessage}) {
   }
 
   return (
-    <>
-      <Wrapper>
-        <InputForm onSubmit={handleOnSubmit}>
-          <InputStyled autoComplete="off" type="text" name="message" id="message" label="message input"></InputStyled>
-          <InputButton type="submit" id="sendMessage">
-            <Icon icon="carbon:send-alt" style={{fontSize: '28px'}} />
-          </InputButton>
-        </InputForm>
-      </Wrapper>
-    </>
+    <Wrapper>
+      <InputForm onSubmit={handleOnSubmit}>
+        <InputStyled autoComplete="off" type="text" name="message" id="message" label="message input"></InputStyled>
+        <InputButton type="submit" id="sendMessage">
+          <Icon icon="carbon:send-alt" style={{fontSize: '28px'}} />
+        </InputButton>
+      </InputForm>
+    </Wrapper>
   );
 }
-
-//
-// onClick={e => handleMessageSubmit(messageInput)}
 
 const Wrapper = styled.div`
   text-align: left;
@@ -47,7 +33,9 @@ const Wrapper = styled.div`
   margin-bottom: 20px;
 `;
 
-const InputForm = styled.form``;
+const InputForm = styled.form`
+  display: flex;
+`;
 
 const InputStyled = styled.input`
   width: 100%;
