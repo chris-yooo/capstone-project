@@ -6,12 +6,14 @@ const styled = {createGlobalStyle};
 export default styled.createGlobalStyle`
   * {
     box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px | 1.6rem = 16px */
+    margin: 0;
+    padding: 0;
   }
 
   body {
-    margin: 0;
-    font-size: 1.125rem;
-    font-family: sans-serif;
+    font-family: 'Inter', arial;
   }
 
   button,
