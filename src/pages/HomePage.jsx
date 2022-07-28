@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import Input from '../components/Input';
 import Chat from '../components/Chat';
-import $ from 'jquery';
+// import $ from 'jquery';
 
-export default function CHRAT({messages, addNewMessage}) {
-  function goToScrollDown() {
-    $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);
-  }
+export default function CHRAT({messages, onNewMessage}) {
+  // function goToScrollDown() {
+  //   $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);
+  // }
   return (
     <>
       <ChratBody>
@@ -17,7 +17,7 @@ export default function CHRAT({messages, addNewMessage}) {
           <Chat messages={messages} goToScrollDown={goToScrollDown} />
           {/* {window.scrollTo(0, document.body.scrollHeight)} */}
         </Main>
-        <Input addNewMessage={addNewMessage} />
+        <Input addNewMessage={onNewMessage} />
       </ChratBody>
     </>
   );

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 
-export default function Input({addNewMessage}) {
+export default function Input({onNewMessage}) {
   function handleOnSubmit(e) {
     e.preventDefault();
     const inputValue = e.target.elements[0].value;
-    addNewMessage(inputValue);
+    onNewMessage(inputValue);
     document.getElementById('deleteForm').reset();
   }
 
