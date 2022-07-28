@@ -4,9 +4,9 @@ import Chat from '../components/Chat';
 // import $ from 'jquery';
 
 export default function CHRAT({messages, onNewMessage}) {
-  // function goToScrollDown() {
-  //   $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);
-  // }
+  function goToScrollDown() {
+    //   $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);
+  }
   return (
     <>
       <ChratBody>
