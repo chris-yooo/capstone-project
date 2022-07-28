@@ -1,6 +1,10 @@
 import styled from 'styled-components';
-import Input from '../components/Input';
-import Chat from '../components/Chat';
+import Input from '../components/Chat/Input';
+import Chat from '../components/Chat/Chat';
+import Hamburger from '../components/Navigation/Hamburger';
+import {Route, Routes} from 'react-router-dom';
+import Imprint from './Imprint';
+
 // import $ from 'jquery';
 
 export default function CHRAT({messages, onNewMessage}) {
@@ -10,18 +14,43 @@ export default function CHRAT({messages, onNewMessage}) {
   return (
     <>
       <ChratBody>
+        {/* Header */}
         <Header>
           <h1>chRat</h1>
         </Header>
-        <Main id={'mainChat'}>
-          <Chat messages={messages} goToScrollDown={goToScrollDown} />
-          {/* {window.scrollTo(0, document.body.scrollHeight)} */}
-        </Main>
-        <Input addNewMessage={onNewMessage} />
+        <Routes>
+          {/* Chat Inhalt Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                {/* Chat Inhalt */}
+                <Main id={'mainChat'}>
+                  <Chat messages={messages} goToScrollDown={goToScrollDown} />
+                </Main>
+                {/* Message Input */}
+                <Input addNewMessage={onNewMessage} />
+              </>
+            }
+          />
+          {/* Imprint Page Route */}
+          <Route
+            path="/Imprint"
+            element={
+              <>
+                <Imprint />
+              </>
+            }
+          />
+        </Routes>
+        {/* Hamburger Menü */}
+        <Hamburger />
       </ChratBody>
     </>
   );
 }
+
+/* {window.scrollTo(0, document.body.scrollHeight)} */
 
 const ChratBody = styled.div`
   display: flex;

@@ -12,7 +12,14 @@ export default function Input({onNewMessage}) {
   return (
     <Wrapper>
       <InputForm onSubmit={handleOnSubmit} id="deleteForm">
-        <InputStyled autoComplete="off" type="text" name="message" id="message" label="message input"></InputStyled>
+        <InputStyled
+          autoComplete="off"
+          type="text"
+          name="message"
+          id="message"
+          label="message input"
+          required
+        ></InputStyled>
         <InputButton type="submit" id="sendMessage">
           <Icon icon="carbon:send-alt" style={{fontSize: '28px'}} />
         </InputButton>
