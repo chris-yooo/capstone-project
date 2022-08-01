@@ -25,30 +25,22 @@ const Main = styled.main`
   height: 415px;
 
   h2 {
-    font-family: 'Inter';
-    font-style: normal;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    color: #fff;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     margin-bottom: 55px;
   }
 
   p {
-    font-family: 'Inter';
-    font-style: normal;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #fff;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
-    color: #fff;
     margin: 20px;
     margin-top: 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    color: #fff;
   }
 `;

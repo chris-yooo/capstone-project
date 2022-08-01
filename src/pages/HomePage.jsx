@@ -4,6 +4,7 @@ import Chat from '../components/Chat/Chat';
 import Hamburger from '../components/Navigation/Hamburger';
 import {Routes, Route} from 'react-router-dom';
 import Imprint from './Imprint';
+import About from './About';
 
 // import $ from 'jquery';
 
@@ -30,6 +31,15 @@ export default function CHRAT({messages, onNewMessage}) {
                 </Main>
                 {/* Message Input */}
                 <Input addNewMessage={onNewMessage} />
+              </>
+            }
+          />
+          {/* About Page Route */}
+          <Route
+            path="/About"
+            element={
+              <>
+                <About />
               </>
             }
           />
