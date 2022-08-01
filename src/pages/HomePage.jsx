@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Input from '../components/Chat/Input';
 import Chat from '../components/Chat/Chat';
 import Hamburger from '../components/Navigation/Hamburger';
-import {Route, Routes} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Imprint from './Imprint';
 
 // import $ from 'jquery';
@@ -81,7 +81,7 @@ const Main = styled.main`
 
   /* height: 475px; */
 
-  height: 550px;
+  height: 475px;
   overflow-y: scroll;
   p {
     margin: 20px;
