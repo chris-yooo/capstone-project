@@ -6,9 +6,9 @@ import {nanoid} from 'nanoid';
 export default function App() {
   const [messages, setMessages] = useState(fakeMessages);
 
-  function addNewMessage(newMessage) {
+  function onNewMessage(newMessage) {
     setMessages(messages => [...messages, {id: nanoid(), msg: newMessage}]);
   }
 
-  return <CHRAT messages={messages} addNewMessage={addNewMessage} />;
+  return <CHRAT messages={messages} onNewMessage={onNewMessage} />;
 }

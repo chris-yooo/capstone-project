@@ -17,7 +17,7 @@ export default function CHRAT({messages, onNewMessage}) {
           <Chat messages={messages} goToScrollDown={goToScrollDown} />
           {/* {window.scrollTo(0, document.body.scrollHeight)} */}
         </Main>
-        <Input addNewMessage={onNewMessage} />
+        <Input onNewMessage={onNewMessage} />
       </ChratBody>
     </>
   );
