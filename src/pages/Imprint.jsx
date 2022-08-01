@@ -1,9 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export default function Imprint() {
   return (
-    <Main>
+    <StyledMain>
       <h2>Imprint</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, exercitationem, totam velit beatae
@@ -14,11 +13,11 @@ export default function Imprint() {
         exercitationem, totam velit beatae laboriosam asperiores veniam consectetur adipisci debitis nostrum maiores?
         Facilis odit quia obcaecati nemo fugit qui dignissimos esse.
       </p>
-    </Main>
+    </StyledMain>
   );
 }
 
-const Main = styled.main`
+const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   width: 375px;
@@ -31,7 +30,7 @@ const Main = styled.main`
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 20px;
   }
 
   p {

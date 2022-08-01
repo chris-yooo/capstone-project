@@ -7,6 +7,7 @@ export default function App() {
   const [messages, setMessages] = useState(fakeMessages);
 
   function addNewMessage(newMessage) {
+    console.log(addNewMessage);
     setMessages(messages => [...messages, {id: nanoid(), msg: newMessage}]);
   }
 

@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import Input from '../components/Chat/Input';
 import Chat from '../components/Chat/Chat';
-import Hamburger from '../components/Navigation/Hamburger';
-import {Routes, Route} from 'react-router-dom';
-import Imprint from './Imprint';
+import Input from '../components/Chat/Input';
 import About from './About';
+import Imprint from './Imprint';
+import Hamburger from '../components/Navigation/Hamburger';
+import styled from 'styled-components';
+import {Routes, Route} from 'react-router-dom';
 
 // import $ from 'jquery';
 
@@ -14,11 +14,11 @@ export default function CHRAT({messages, onNewMessage}) {
   }
   return (
     <>
-      <ChratBody>
+      <StyledChratDiv>
         {/* Header */}
-        <Header>
+        <StyledHeader>
           <h1>chRat</h1>
-        </Header>
+        </StyledHeader>
         <Routes>
           {/* Chat Inhalt Page */}
           <Route
@@ -26,9 +26,10 @@ export default function CHRAT({messages, onNewMessage}) {
             element={
               <>
                 {/* Chat Inhalt */}
-                <Main id={'mainChat'}>
+                {/* <StyledMain id={'mainChat'}> */}
+                <StyledMain>
                   <Chat messages={messages} goToScrollDown={goToScrollDown} />
-                </Main>
+                </StyledMain>
                 {/* Message Input */}
                 <Input addNewMessage={onNewMessage} />
               </>
@@ -36,7 +37,7 @@ export default function CHRAT({messages, onNewMessage}) {
           />
           {/* About Page Route */}
           <Route
-            path="/About"
+            path="/about"
             element={
               <>
                 <About />
@@ -45,7 +46,7 @@ export default function CHRAT({messages, onNewMessage}) {
           />
           {/* Imprint Page Route */}
           <Route
-            path="/Imprint"
+            path="/imprint"
             element={
               <>
                 <Imprint />
@@ -55,14 +56,14 @@ export default function CHRAT({messages, onNewMessage}) {
         </Routes>
         {/* Hamburger Menü */}
         <Hamburger />
-      </ChratBody>
+      </StyledChratDiv>
     </>
   );
 }
 
 /* {window.scrollTo(0, document.body.scrollHeight)} */
 
-const ChratBody = styled.div`
+const StyledChratDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,27 +73,28 @@ const ChratBody = styled.div`
   background-color: rgba(154, 154, 154, 0.5);
 `;
 
-const Header = styled.header`
+const StyledHeader = styled.header`
   margin: 10px;
+
   h1 {
     /* margin: 0; */
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 4rem;
-    text-align: center;
+
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 24px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
   }
 `;
 
-const Main = styled.main`
+const StyledMain = styled.main`
   width: 375px;
-
-  /* height: 475px; */
-
   height: 475px;
   overflow-y: scroll;
+
   p {
     margin: 20px;
     margin-top: 0;

@@ -1,34 +1,36 @@
 import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 
-export default function Input({onNewMessage}) {
+export default function Input({addNewMessage}) {
+  // hier
   function handleOnSubmit(e) {
     e.preventDefault();
     const inputValue = e.target.elements[0].value;
-    onNewMessage(inputValue);
+    addNewMessage(inputValue);
     document.getElementById('deleteForm').reset();
+    console.log(addNewMessage);
   }
 
   return (
-    <Wrapper>
-      <InputForm onSubmit={handleOnSubmit} id="deleteForm">
-        <InputStyled
+    <StyledDiv>
+      <StyledInputForm onSubmit={handleOnSubmit} id="deleteForm">
+        <StyledInput
           autoComplete="off"
           type="text"
           name="message"
           id="message"
           label="message input"
           required
-        ></InputStyled>
-        <InputButton type="submit" id="sendMessage">
+        ></StyledInput>
+        <StyledInputButton type="submit" id="sendMessage">
           <Icon icon="carbon:send-alt" style={{fontSize: '28px'}} />
-        </InputButton>
-      </InputForm>
-    </Wrapper>
+        </StyledInputButton>
+      </StyledInputForm>
+    </StyledDiv>
   );
 }
 
-const Wrapper = styled.div`
+const StyledDiv = styled.div`
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -41,13 +43,13 @@ const Wrapper = styled.div`
   margin-bottom: 20px;
 `;
 
-const InputForm = styled.form`
+const StyledInputForm = styled.form`
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
 
-const InputStyled = styled.input`
+const StyledInput = styled.input`
   width: 100%;
   font-size: 2rem;
   padding: 0.4rem;
@@ -61,7 +63,7 @@ const InputStyled = styled.input`
   }
 `;
 
-const InputButton = styled.button`
+const StyledInputButton = styled.button`
   width: 7rem;
   border: none;
   border-radius: 12px;
