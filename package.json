@@ -19,6 +19,7 @@
     "test": "npm run test:unit"
   },
   "dependencies": {
+    "hamburger-react": "^2.5.0",
     "jquery": "^3.6.0",
     "mongoose": "^6.4.0",
     "nanoid": "^4.0.0",

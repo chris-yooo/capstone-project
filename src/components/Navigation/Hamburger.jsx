@@ -1,24 +1,30 @@
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 import {Icon} from '@iconify/react';
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 export default function Hamburger() {
-  const handleToggle = () => {
-    setNavbarOpen(prev => !prev);
-  };
-
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
+  };
 
   return (
     <StyledButton onClick={handleToggle}>
-      <StyledNav>
-        {/* {navbarOpen ? 'Close' : 'Open'} */}
-        <Icon icon="charm:menu-hamburger" style={{fontSize: '28px'}} />
+      {navbarOpen}
 
-        {/* <StyledLink to="/">Chat</StyledLink> */}
-        {/* <StyledLink to="/About">About</StyledLink> */}
-        {/* <StyledLink to="/Imprint">Imprint</StyledLink> */}
+      <StyledNav className="hamburgerMenu">
+        <Icon icon="charm:menu-hamburger" style={{fontSize: '28px'}} />
+        <StyledLink to="/" className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
+          Chat
+        </StyledLink>
+        <StyledLink to="/about" className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
+          About
+        </StyledLink>
+        <StyledLink to="/imprint" className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
+          Imprint
+        </StyledLink>
       </StyledNav>
     </StyledButton>
   );
@@ -56,6 +62,11 @@ const StyledLink = styled(NavLink)`
   background: #d9d9d9;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
+  visibility: hidden;
+
+  &.isOpen {
+    visibility: visible;
+  }
 
   /* &.active {
     background-color: black;

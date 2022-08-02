@@ -31,7 +31,7 @@ export default function CHRAT({messages, onNewMessage}) {
                   <Chat messages={messages} goToScrollDown={goToScrollDown} />
                 </StyledMain>
                 {/* Message Input */}
-                <Input addNewMessage={onNewMessage} />
+                <Input onNewMessage={onNewMessage} />
               </>
             }
           />
