@@ -33,8 +33,6 @@ const StyledNav = styled.nav`
   top: ${props => (props.isOpen ? '542px' : '618px')};
   width: 375px;
   height: 49px;
-  background: linear-gradient(180deg, #d9d9d9 0%, rgba(217, 217, 217, 0) 100%);
-  filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.25));
   border-radius: 12px 12px 0 0;
 `;
 

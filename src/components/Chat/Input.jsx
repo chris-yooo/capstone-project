@@ -49,12 +49,14 @@ const StyledInputForm = styled.form`
 
 const StyledInput = styled.input`
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 0.4rem;
   padding-left: 0.8rem;
-  color: white;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  font-style: normal;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
   &:hover {
     outline: 1px solid #0060df;
