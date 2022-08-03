@@ -6,36 +6,26 @@ import styled from 'styled-components';
 import {Routes, Route} from 'react-router-dom';
 import Nav from '../components/Navigation/Nav';
 
-// import $ from 'jquery';
-
 export default function CHRAT({messages, onNewMessage}) {
-  function goToScrollDown() {
-    //   $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);
-  }
+  function goToScrollDown() {}
   return (
     <>
       <StyledChratDiv>
-        {/* Header */}
         <StyledHeader>
           <h1>chRat</h1>
         </StyledHeader>
         <Routes>
-          {/* Chat Inhalt Page */}
           <Route
             path="/"
             element={
               <>
-                {/* Chat Inhalt */}
-                {/* <StyledMain id={'mainChat'}> */}
                 <StyledMain>
                   <Chat messages={messages} goToScrollDown={goToScrollDown} />
                 </StyledMain>
-                {/* Message Input */}
                 <Input onNewMessage={onNewMessage} />
               </>
             }
           />
-          {/* About Page Route */}
           <Route
             path="/about"
             element={
@@ -44,7 +34,6 @@ export default function CHRAT({messages, onNewMessage}) {
               </>
             }
           />
-          {/* Imprint Page Route */}
           <Route
             path="/imprint"
             element={
@@ -54,14 +43,11 @@ export default function CHRAT({messages, onNewMessage}) {
             }
           />
         </Routes>
-        {/* Hamburger Menü */}
         <Nav />
       </StyledChratDiv>
     </>
   );
 }
-
-/* {window.scrollTo(0, document.body.scrollHeight)} */
 
 const StyledChratDiv = styled.div`
   display: flex;
@@ -77,8 +63,6 @@ const StyledHeader = styled.header`
   margin: 10px;
 
   h1 {
-    /* margin: 0; */
-
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     font-weight: 400;
@@ -105,3 +89,10 @@ const StyledMain = styled.main`
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   }
 `;
+
+// unused code
+
+// <StyledMain id={'mainChat'}>
+// {window.scrollTo(0, document.body.scrollHeight)}
+// import $ from 'jquery';
+// $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);

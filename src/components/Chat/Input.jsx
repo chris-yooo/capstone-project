@@ -20,7 +20,7 @@ export default function Input({onNewMessage}) {
           label="message input"
           required
         ></StyledInput>
-        <StyledInputButton type="submit" id="sendMessage">
+        <StyledInputButton label="send message button" type="submit" id="sendMessage">
           <Icon icon="carbon:send-alt" style={{fontSize: '28px'}} />
         </StyledInputButton>
       </StyledInputForm>

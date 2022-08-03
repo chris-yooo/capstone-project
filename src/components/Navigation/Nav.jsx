@@ -15,13 +15,11 @@ export default function Nav() {
       <div onClick={toggleHamburger}>
         <HamburgerMenu />
       </div>
-      <StyledDiv>
-        <StyledUl isOpen={hamburgerOpen}>
-          <StyledLink to="/">Chat</StyledLink>
-          <StyledLink to="/about">About</StyledLink>
-          <StyledLink to="/imprint">Imprint</StyledLink>
-        </StyledUl>
-      </StyledDiv>
+      <StyledUl isOpen={hamburgerOpen}>
+        <StyledLink to="/">Chat</StyledLink>
+        <StyledLink to="/about">About</StyledLink>
+        <StyledLink to="/imprint">Imprint</StyledLink>
+      </StyledUl>
     </StyledNav>
   );
 }
@@ -31,8 +29,6 @@ const StyledNav = styled.nav`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  /* justify-items: auto; */
   position: fixed;
   top: ${props => (props.isOpen ? '542px' : '618px')};
   width: 375px;
@@ -53,8 +49,6 @@ const StyledUl = styled.ul`
   filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.25));
   border-radius: 12px 12px 0 0;
 `;
-
-const StyledDiv = styled.div``;
 
 const StyledLink = styled(NavLink)`
   display: flex;
