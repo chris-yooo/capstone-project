@@ -52,7 +52,7 @@ const StyledInput = styled.input`
   font-size: 1.6rem;
   padding: 0.4rem;
   padding-left: 0.8rem;
-  color: #fff;
+  color: #2e2e2e;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   font-style: normal;

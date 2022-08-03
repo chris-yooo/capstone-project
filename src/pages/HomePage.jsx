@@ -54,13 +54,13 @@ const StyledChratDiv = styled.div`
   flex-direction: column;
   align-items: center;
   align-content: center;
-  width: 375px;
-  height: 667px;
-  background-color: rgba(154, 154, 154, 0.5);
+  width: 100%;
+  height: 100%;
 `;
 
 const StyledHeader = styled.header`
-  margin: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   h1 {
     color: #fff;
@@ -86,7 +86,7 @@ const StyledMain = styled.main`
     font-size: 15px;
     line-height: 18px;
     color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
   }
 `;
 

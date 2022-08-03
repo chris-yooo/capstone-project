@@ -31,15 +31,14 @@ const StyledNav = styled.nav`
   justify-content: center;
   position: fixed;
   top: ${props => (props.isOpen ? '542px' : '618px')};
-  width: 375px;
+  width: 100%;
   height: 49px;
-  border-radius: 12px 12px 0 0;
 `;
 
 const StyledUl = styled.ul`
   display: ${props => (props.isOpen ? 'flex' : 'none')};
   position: relative;
-  flex-flow: column wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 375px;
@@ -54,8 +53,7 @@ const StyledLink = styled(NavLink)`
   justify-content: center;
   align-items: center;
   padding: 0 53px;
-  margin-bottom: 8px;
-  margin-top: 8px;
+  margin-top: 10px;
   gap: 10px;
   width: 175px;
   height: 35px;

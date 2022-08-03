@@ -1,6 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
 
-// Trick prettier into formatting "createGlobalStyle"
 const styled = {createGlobalStyle};
 
 export default styled.createGlobalStyle`
@@ -14,6 +13,7 @@ export default styled.createGlobalStyle`
 
   body {
     font-family: 'Inter', arial;
+    background-color: rgba(154, 154, 154, 0.5);
   }
 
   button,
