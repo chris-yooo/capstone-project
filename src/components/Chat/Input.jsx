@@ -37,7 +37,7 @@ const StyledDiv = styled.div`
   background: #d9d9d9;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
 `;
 

@@ -2,9 +2,9 @@ import Chat from '../components/Chat/Chat';
 import Input from '../components/Chat/Input';
 import About from './About';
 import Imprint from './Imprint';
-import Hamburger from '../components/Navigation/Hamburger';
 import styled from 'styled-components';
 import {Routes, Route} from 'react-router-dom';
+import Nav from '../components/Navigation/Nav';
 
 // import $ from 'jquery';
 
@@ -55,7 +55,7 @@ export default function CHRAT({messages, onNewMessage}) {
           />
         </Routes>
         {/* Hamburger Menü */}
-        <Hamburger />
+        <Nav />
       </StyledChratDiv>
     </>
   );
@@ -85,7 +85,6 @@ const StyledHeader = styled.header`
     font-size: 4rem;
     line-height: 24px;
     text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     margin-bottom: 10px;
   }
 `;
@@ -103,5 +102,6 @@ const StyledMain = styled.main`
     font-size: 15px;
     line-height: 18px;
     color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   }
 `;
