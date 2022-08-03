@@ -1,59 +1,83 @@
+import Chat from '../components/Chat/Chat';
+import Input from '../components/Chat/Input';
+import About from './About';
+import Imprint from './Imprint';
 import styled from 'styled-components';
-import Input from '../components/Input';
-import Chat from '../components/Chat';
-// import $ from 'jquery';
+import {Routes, Route} from 'react-router-dom';
+import Nav from '../components/Navigation/Nav';
 
 export default function CHRAT({messages, onNewMessage}) {
-  function goToScrollDown() {
-    //   $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);
-  }
+  function goToScrollDown() {}
   return (
     <>
-      <ChratBody>
-        <Header>
+      <StyledChratDiv>
+        <StyledHeader>
           <h1>chRat</h1>
-        </Header>
-        <Main id={'mainChat'}>
-          <Chat messages={messages} goToScrollDown={goToScrollDown} />
-          {/* {window.scrollTo(0, document.body.scrollHeight)} */}
-        </Main>
-        <Input addNewMessage={onNewMessage} />
-      </ChratBody>
+        </StyledHeader>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <StyledMain>
+                  <Chat messages={messages} goToScrollDown={goToScrollDown} />
+                </StyledMain>
+                <Input onNewMessage={onNewMessage} />
+              </>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+                <About />
+              </>
+            }
+          />
+          <Route
+            path="/imprint"
+            element={
+              <>
+                <Imprint />
+              </>
+            }
+          />
+        </Routes>
+        <Nav />
+      </StyledChratDiv>
     </>
   );
 }
 
-const ChratBody = styled.div`
+const StyledChratDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  width: 375px;
-  height: 667px;
-  background-color: rgba(154, 154, 154, 0.5);
+  width: 100%;
+  height: 100%;
 `;
 
-const Header = styled.header`
-  margin: 10px;
+const StyledHeader = styled.header`
+  margin-top: 15px;
+  margin-bottom: 15px;
+
   h1 {
-    /* margin: 0; */
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 4rem;
-    text-align: center;
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 10px;
   }
 `;
 
-const Main = styled.main`
+const StyledMain = styled.main`
   width: 375px;
-
-  /* height: 475px; */
-
-  height: 550px;
+  height: 475px;
   overflow-y: scroll;
+
   p {
     margin: 20px;
     margin-top: 0;
@@ -62,5 +86,13 @@ const Main = styled.main`
     font-size: 15px;
     line-height: 18px;
     color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
   }
 `;
+
+// unused code
+
+// <StyledMain id={'mainChat'}>
+// {window.scrollTo(0, document.body.scrollHeight)}
+// import $ from 'jquery';
+// $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);
