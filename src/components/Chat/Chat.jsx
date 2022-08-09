@@ -1,7 +1,10 @@
 export default function Chat({messages, goToScrollDown}) {
-  return messages.map(message => {
+  console.log(messages);
+
+  return messages?.map(message => {
+    // console.log(message);
     return (
-      <p key={message.id}>
+      <p key={message._id}>
         {message.msg}
         {/* {message.msg} {goToScrollDown()} */}
       </p>
