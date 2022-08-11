@@ -30,7 +30,7 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: ${props => (props.isOpen ? '542px' : '618px')};
+  bottom: ${props => (props.isOpen ? '72px' : '0px')};
   width: 100%;
   height: 49px;
 `;
@@ -42,7 +42,8 @@ const StyledUl = styled.ul`
   justify-content: center;
   align-items: center;
   width: 375px;
-  background: linear-gradient(180deg, #d9d9d9 0%, rgba(217, 217, 217, 0) 100%);
+  padding-bottom: 10px;
+  background: linear-gradient(180deg, #d9d9d9 0%, rgba(217, 217, 217, 0.9) 100%);
   filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.25));
   border-radius: 12px 12px 0 0;
 `;
@@ -54,7 +55,6 @@ const StyledLink = styled(NavLink)`
   align-items: center;
   padding: 0 53px;
   margin-top: 10px;
-  gap: 10px;
   width: 175px;
   height: 35px;
   font-size: 1.6rem;
@@ -68,6 +68,7 @@ const StyledLink = styled(NavLink)`
   }
   a:visited {
     text-decoration: none;
+    color: black;
   }
   a:active {
     text-decoration: none;

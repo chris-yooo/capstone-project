@@ -59,16 +59,35 @@ const StyledInput = styled.input`
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
   &:hover {
-    outline: 1px solid #0060df;
+    outline: 2px solid #0060df;
+    border-radius: 12px 0 0 12px;
+  }
+  &:active {
+    outline: 2px solid #0060df;
+    border-radius: 12px 0 0 12px;
+  }
+  &:focus {
+    outline: 2px solid #0060df;
+    border-radius: 12px 0 0 12px;
   }
 `;
 
 const StyledInputButton = styled.button`
   width: 7rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 0 12px 12px 0;
+  margin-left: 2px;
 
   &:hover {
-    outline: 1px solid #0060df;
+    outline: 2px solid #0060df;
+    border-radius: 0 12px 12px 0;
+  }
+  &:active {
+    outline: 2px solid #0060df;
+    border-radius: 0 12px 12px 0;
+  }
+  &:focus {
+    outline: 2px solid #0060df;
+    border-radius: 0 12px 12px 0;
   }
 `;

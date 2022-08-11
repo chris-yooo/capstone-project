@@ -75,6 +75,7 @@ const StyledMain = styled.main`
   width: 375px;
   height: 475px;
   overflow-y: scroll;
+  scrollbar-width: none;
 
   p {
     margin: 20px;
