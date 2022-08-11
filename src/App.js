@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react';
 import CHRAT from './pages/HomePage';
 import {nanoid} from 'nanoid';
 import {getMessages} from './services/MessageGet';
-import fakeMessages from './fakeMessages';
 
 export default function App() {
   const [messages, setMessages] = useState();
