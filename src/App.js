@@ -24,8 +24,31 @@ export default function App() {
     }
   }, [shouldUpdate]);
 
+  const sendMessage = async message => {
+    try {
+      const response = await fetch('/api/messages', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({message}),
+      });
+      if (response.ok) {
+        const newMessage = await response.json();
+        return newMessage;
+      } else {
+        throw new Error(`${response.status}`);
+      }
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
+  };
+
   function onNewMessage(newMessage) {
     setMessages(messages => [...messages, {id: nanoid(), msg: newMessage}]);
+    sendMessage(newMessage);
   }
 
   return <CHRAT messages={messages} onNewMessage={onNewMessage} />;
