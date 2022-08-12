@@ -17,8 +17,10 @@ export default function CHRAT({messages, onNewMessage}) {
           path="/"
           element={
             <>
-              <Chat messages={messages} />
-              <div id="jumpto"></div>
+              <StyledMain>
+                <Chat messages={messages} />
+                <div id="anchor" />
+              </StyledMain>
               <Input onNewMessage={onNewMessage} />
             </>
           }
@@ -37,18 +39,8 @@ const StyledDiv = styled.div`
   align-items: center;
   align-content: center;
 
-  @media (max-height: 667px), (max-width: 375px) and (orientation: portrait) {
-    width: 375px;
-    height: 581px;
-  }
-
-  @media (max-height: 800px), (max-width: 375px) and (orientation: portrait) {
-    width: 375px;
-    height: 751px;
-  }
-
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
 `;
 
 const StyledHeader = styled.header`
@@ -64,5 +56,70 @@ const StyledHeader = styled.header`
     line-height: 24px;
     text-align: center;
     margin-bottom: 10px;
+  }
+`;
+
+const StyledMain = styled.main`
+  /* height: 490px; */
+  /* width: 375px; */
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  @media (min-width: 300px) {
+    width: 290px;
+  }
+  @media (min-width: 375px) {
+    width: 375px;
+  }
+  @media (min-width: 600px) {
+    width: 590px;
+  }
+  @media (min-width: 1000px) {
+    width: 950px;
+  }
+  @media (min-width: 1500px) {
+    width: 1490px;
+  }
+  @media (min-width: 1800px) {
+    width: 1790px;
+  }
+
+  @media (min-height: 300px) {
+    height: 250px;
+  }
+  @media (min-height: 667px) {
+    height: 490px;
+  }
+  @media (min-height: 750px) {
+    height: 580px;
+  }
+  @media (min-height: 950px) {
+    height: 780px;
+  }
+
+  b {
+    display: block;
+    margin: 20px;
+    word-wrap: break-word;
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+  }
+
+  p {
+    display: block;
+    margin: 20px;
+    word-wrap: break-word;
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
   }
 `;

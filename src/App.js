@@ -8,8 +8,11 @@ export default function App() {
   const [shouldUpdate, setShouldUpdate] = useState(true);
 
   function jumpTo(anchor_id) {
-    const url = location.href;
-    location.href = '#' + anchor_id;
+    window.location.href = '#' + anchor_id;
+  }
+
+  function machScroll() {
+    window.scrollTo(0, document.body.scrollHeight);
   }
 
   useEffect(() => {
@@ -22,7 +25,7 @@ export default function App() {
       } finally {
         setShouldUpdate(false);
 
-        jumpTo('jumpto');
+        jumpTo('anchor');
       }
     }
 
@@ -56,6 +59,10 @@ export default function App() {
   function onNewMessage(newMessage) {
     setMessages(messages => [...messages, {id: nanoid(), msg: newMessage}]);
     sendMessage(newMessage);
+    machScroll();
+    setTimeout(function () {
+      setShouldUpdate(true);
+    }, 500);
   }
 
   return <CHRAT messages={messages} onNewMessage={onNewMessage} />;

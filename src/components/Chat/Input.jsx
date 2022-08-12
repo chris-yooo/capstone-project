@@ -31,14 +31,14 @@ export default function Input({onNewMessage}) {
 const StyledDiv = styled.div`
   text-align: left;
   display: flex;
+  position: fixed;
+  bottom: 52px;
   justify-content: space-between;
   width: 346px;
   height: 45px;
   background: #d9d9d9;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 `;
 
 const StyledInputForm = styled.form`
