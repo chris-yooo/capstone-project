@@ -1,10 +1,5 @@
-export default function Chat({messages, goToScrollDown}) {
+export default function Chat({messages}) {
   return messages?.map(message => {
-    return (
-      <p key={message._id}>
-        {message.msg}
-        {/* {message.msg} {goToScrollDown()} */}
-      </p>
-    );
+    return <p key={message._id}>{message.msg}</p>;
   });
 }

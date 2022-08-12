@@ -7,7 +7,6 @@ import {Routes, Route} from 'react-router-dom';
 import Nav from '../components/Navigation/Nav';
 
 export default function CHRAT({messages, onNewMessage}) {
-  function goToScrollDown() {}
   return (
     <StyledChratDiv>
       <StyledHeader>
@@ -19,7 +18,8 @@ export default function CHRAT({messages, onNewMessage}) {
           element={
             <>
               <StyledMain>
-                <Chat messages={messages} goToScrollDown={goToScrollDown} />
+                <Chat messages={messages} />
+                <div id="jumpto"></div>
               </StyledMain>
               <Input onNewMessage={onNewMessage} />
             </>
@@ -92,6 +92,5 @@ const StyledMain = styled.main`
 // unused code
 
 // <StyledMain id={'mainChat'}>
-// {window.scrollTo(0, document.body.scrollHeight)}
 // import $ from 'jquery';
 // $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);

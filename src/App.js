@@ -6,6 +6,12 @@ import {getMessages} from './services/MessageGet';
 export default function App() {
   const [messages, setMessages] = useState();
   const [shouldUpdate, setShouldUpdate] = useState(true);
+
+  function jumpTo(anchor_id) {
+    const url = location.href;
+    location.href = '#' + anchor_id;
+  }
+
   useEffect(() => {
     async function fetchMessages() {
       try {
@@ -15,6 +21,8 @@ export default function App() {
         console.log(err);
       } finally {
         setShouldUpdate(false);
+
+        jumpTo('jumpto');
       }
     }
 
