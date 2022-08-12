@@ -15,6 +15,10 @@ export default function App() {
     window.scrollTo(0, document.body.scrollHeight);
   }
 
+  setTimeout(function () {
+    setShouldUpdate(true);
+  }, 7000);
+
   useEffect(() => {
     async function fetchMessages() {
       try {
