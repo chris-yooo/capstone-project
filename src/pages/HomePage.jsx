@@ -38,9 +38,6 @@ const StyledDiv = styled.div`
   flex-direction: column;
   align-items: center;
   align-content: center;
-
-  /* width: 100%; */
-  /* height: 100%; */
 `;
 
 const StyledHeader = styled.header`
@@ -60,8 +57,6 @@ const StyledHeader = styled.header`
 `;
 
 const StyledMain = styled.main`
-  /* height: 490px; */
-  /* width: 375px; */
   overflow-y: scroll;
   scrollbar-width: none;
 
