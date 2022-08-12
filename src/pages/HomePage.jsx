@@ -8,7 +8,7 @@ import Nav from '../components/Navigation/Nav';
 
 export default function CHRAT({messages, onNewMessage}) {
   return (
-    <StyledChratDiv>
+    <StyledDiv>
       <StyledHeader>
         <h1>chRat</h1>
       </StyledHeader>
@@ -17,41 +17,36 @@ export default function CHRAT({messages, onNewMessage}) {
           path="/"
           element={
             <>
-              <StyledMain>
-                <Chat messages={messages} />
-                <div id="jumpto"></div>
-              </StyledMain>
+              <Chat messages={messages} />
+              <div id="jumpto"></div>
               <Input onNewMessage={onNewMessage} />
             </>
           }
         />
-        <Route
-          path="/about"
-          element={
-            <>
-              <About />
-            </>
-          }
-        />
-        <Route
-          path="/imprint"
-          element={
-            <>
-              <Imprint />
-            </>
-          }
-        />
+        <Route path="/about" element={<About />} />
+        <Route path="/imprint" element={<Imprint />} />
       </Routes>
       <Nav />
-    </StyledChratDiv>
+    </StyledDiv>
   );
 }
 
-const StyledChratDiv = styled.div`
+const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
+
+  @media (max-height: 667px), (max-width: 375px) and (orientation: portrait) {
+    width: 375px;
+    height: 581px;
+  }
+
+  @media (max-height: 800px), (max-width: 375px) and (orientation: portrait) {
+    width: 375px;
+    height: 751px;
+  }
+
   width: 100%;
   height: 100%;
 `;
@@ -59,6 +54,7 @@ const StyledChratDiv = styled.div`
 const StyledHeader = styled.header`
   margin-top: 15px;
   margin-bottom: 15px;
+  height: 37px;
 
   h1 {
     color: #fff;
@@ -70,27 +66,3 @@ const StyledHeader = styled.header`
     margin-bottom: 10px;
   }
 `;
-
-const StyledMain = styled.main`
-  width: 375px;
-  height: 475px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-
-  p {
-    margin: 20px;
-    margin-top: 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
-  }
-`;
-
-// unused code
-
-// <StyledMain id={'mainChat'}>
-// import $ from 'jquery';
-// $('#mainChat').scrollTop($('#mainChat')[0].scrollHeight);

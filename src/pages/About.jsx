@@ -26,8 +26,8 @@ export default function About() {
 const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
-  width: 375px;
-  height: 415px;
+  overflow-y: scroll;
+  scrollbar-width: none;
 
   h2 {
     color: #fff;
@@ -42,10 +42,14 @@ const StyledMain = styled.main`
   p {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: #fff;
-    font-weight: 400;
     font-size: 15px;
     line-height: 18px;
     margin: 20px;
     margin-top: 0;
+  }
+
+  a {
+    font-size: 1.6rem;
+    color: #fff;
   }
 `;
