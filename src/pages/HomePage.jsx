@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import {Routes, Route} from 'react-router-dom';
 import Nav from '../components/Navigation/Nav';
 
-export default function CHRAT({messages, onNewMessage}) {
+export default function CHRAT({messages, onNewMessage, dontJump}) {
   return (
     <StyledDiv>
       <StyledHeader>
@@ -21,7 +21,7 @@ export default function CHRAT({messages, onNewMessage}) {
                 <Chat messages={messages} />
                 <div id="anchor" />
               </StyledMain>
-              <Input onNewMessage={onNewMessage} />
+              <Input onNewMessage={onNewMessage} dontJump={dontJump} />
             </>
           }
         />

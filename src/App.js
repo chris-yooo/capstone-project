@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import CHRAT from './pages/HomePage';
 import {nanoid} from 'nanoid';
 import {getMessages} from './services/MessageGet';
@@ -19,20 +19,21 @@ export default function App() {
     setShouldUpdate(true);
   }, 7000);
 
+  const dontJump = useRef();
+
   useEffect(() => {
     async function fetchMessages() {
       try {
         const fetchedMessages = await getMessages();
         setMessages(fetchedMessages);
+        dontJump.current.focus();
       } catch (err) {
         console.log(err);
       } finally {
         setShouldUpdate(false);
-
         jumpTo('anchor');
       }
     }
-
     if (shouldUpdate) {
       fetchMessages();
     }
