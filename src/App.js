@@ -13,6 +13,7 @@ export default function App() {
 
   function machScroll() {
     window.scrollTo(0, document.body.scrollHeight);
+    dontJump.current.focus();
   }
 
   setTimeout(function () {
