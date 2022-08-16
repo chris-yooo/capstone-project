@@ -18,7 +18,7 @@ export default function Chat({messages}) {
       {messages?.map(message => {
         return (
           <>
-            <StyledDate key={message._id}>{getCurrentDate(message.date)}:</StyledDate>
+            <StyledDate key={message._id}>{`${getCurrentDate(message.date)} Uhr`}</StyledDate>
             <StyledMessage>{message.msg}</StyledMessage>
           </>
         );
