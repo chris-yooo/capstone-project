@@ -6,6 +6,15 @@ import {getMessages} from './services/MessageGet';
 export default function App() {
   const [messages, setMessages] = useState();
   const [shouldUpdate, setShouldUpdate] = useState(true);
+
+  function jumpTo(anchor_id) {
+    window.location.href = '#' + anchor_id;
+  }
+
+  function machScroll() {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
   useEffect(() => {
     async function fetchMessages() {
       try {
@@ -15,6 +24,8 @@ export default function App() {
         console.log(err);
       } finally {
         setShouldUpdate(false);
+
+        jumpTo('anchor');
       }
     }
 
@@ -48,6 +59,10 @@ export default function App() {
   function onNewMessage(newMessage) {
     setMessages(messages => [...messages, {id: nanoid(), msg: newMessage}]);
     sendMessage(newMessage);
+    machScroll();
+    setTimeout(function () {
+      setShouldUpdate(true);
+    }, 500);
   }
 
   return <CHRAT messages={messages} onNewMessage={onNewMessage} />;

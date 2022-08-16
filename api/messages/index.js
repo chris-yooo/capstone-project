@@ -10,7 +10,7 @@ const Handler = async (request, response) => {
         if (messages) {
           return response.json(
             messages.map(message => {
-              return {_id: message._id, msg: message.msg};
+              return {_id: message._id, msg: message.msg, date: message.date};
             })
           );
         } else {

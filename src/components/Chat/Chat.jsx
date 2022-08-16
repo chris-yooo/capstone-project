@@ -1,10 +1,13 @@
-export default function Chat({messages, goToScrollDown}) {
-  return messages?.map(message => {
-    return (
-      <p key={message._id}>
-        {message.msg}
-        {/* {message.msg} {goToScrollDown()} */}
-      </p>
-    );
-  });
+export default function Chat({messages}) {
+  return (
+    <>
+      {messages?.map(message => {
+        return (
+          <p key={message._id}>
+            {message.date}: <b>{message.msg}</b>
+          </p>
+        );
+      })}
+    </>
+  );
 }
