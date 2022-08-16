@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 
-export default function Input({onNewMessage, dontJump}) {
+export default function Input({onNewMessage, enableFocus}) {
   function handleOnSubmit(e) {
     e.preventDefault();
     const inputValue = e.target.elements[0].value;
@@ -13,7 +13,7 @@ export default function Input({onNewMessage, dontJump}) {
     <StyledDiv>
       <StyledInputForm onSubmit={handleOnSubmit} id="deleteForm">
         <StyledInput
-          ref={dontJump}
+          ref={enableFocus}
           autoComplete="off"
           type="text"
           name="message"

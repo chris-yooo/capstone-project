@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import {Routes, Route} from 'react-router-dom';
 import Nav from '../components/Navigation/Nav';
 
-export default function CHRAT({messages, onNewMessage, dontJump}) {
+export default function CHRAT({messages, onNewMessage, enableFocus}) {
   return (
     <StyledDiv>
       <StyledHeader>
@@ -21,7 +21,7 @@ export default function CHRAT({messages, onNewMessage, dontJump}) {
                 <Chat messages={messages} />
                 <div id="anchor" />
               </StyledMain>
-              <Input onNewMessage={onNewMessage} dontJump={dontJump} />
+              <Input onNewMessage={onNewMessage} enableFocus={enableFocus} />
             </>
           }
         />
@@ -59,6 +59,7 @@ const StyledHeader = styled.header`
 const StyledMain = styled.main`
   overflow-y: scroll;
   scrollbar-width: none;
+  padding: 0 10px 0 23px;
 
   @media (min-width: 300px) {
     width: 290px;
@@ -90,31 +91,5 @@ const StyledMain = styled.main`
   }
   @media (min-height: 950px) {
     height: 780px;
-  }
-
-  b {
-    display: block;
-    margin: 20px;
-    word-wrap: break-word;
-    margin-top: 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
-  }
-
-  p {
-    display: block;
-    margin: 20px;
-    word-wrap: break-word;
-    margin-top: 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
   }
 `;

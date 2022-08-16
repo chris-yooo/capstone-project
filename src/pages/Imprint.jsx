@@ -41,6 +41,7 @@ const StyledMain = styled.main`
   flex-direction: column;
   overflow-y: scroll;
   scrollbar-width: none;
+  height: 540px;
 
   h2 {
     color: #fff;

@@ -1,44 +1,34 @@
 import {useState, useEffect, useRef} from 'react';
 import CHRAT from './pages/HomePage';
-import {nanoid} from 'nanoid';
 import {getMessages} from './services/MessageGet';
 
 export default function App() {
   const [messages, setMessages] = useState();
-  const [shouldUpdate, setShouldUpdate] = useState(true);
 
   function jumpTo(anchor_id) {
     window.location.href = '#' + anchor_id;
+    enableFocus.current.focus();
   }
 
-  function machScroll() {
-    window.scrollTo(0, document.body.scrollHeight);
-    dontJump.current.focus();
-  }
-
-  setTimeout(function () {
-    setShouldUpdate(true);
-  }, 7000);
-
-  const dontJump = useRef();
+  const enableFocus = useRef(null);
 
   useEffect(() => {
     async function fetchMessages() {
       try {
         const fetchedMessages = await getMessages();
         setMessages(fetchedMessages);
-        dontJump.current.focus();
+        enableFocus.current.focus();
       } catch (err) {
         console.log(err);
       } finally {
-        setShouldUpdate(false);
         jumpTo('anchor');
       }
     }
-    if (shouldUpdate) {
-      fetchMessages();
-    }
-  }, [shouldUpdate]);
+    const fetchInterval = setInterval(fetchMessages, 1000);
+    return () => {
+      clearInterval(fetchInterval);
+    };
+  }, []);
 
   const sendMessage = async message => {
     try {
@@ -63,13 +53,8 @@ export default function App() {
   };
 
   function onNewMessage(newMessage) {
-    setMessages(messages => [...messages, {id: nanoid(), msg: newMessage}]);
     sendMessage(newMessage);
-    machScroll();
-    setTimeout(function () {
-      setShouldUpdate(true);
-    }, 500);
   }
 
-  return <CHRAT messages={messages} onNewMessage={onNewMessage} />;
+  return <CHRAT messages={messages} onNewMessage={onNewMessage} enableFocus={enableFocus} />;
 }
