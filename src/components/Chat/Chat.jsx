@@ -1,12 +1,24 @@
 import styled from 'styled-components';
 
 export default function Chat({messages}) {
+  function getCurrentDate(value) {
+    return new Date(value)
+      .toLocaleDateString('de-DE', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+      })
+      .replace(/[.,]/g, match => (match === '.' ? '.' : ''));
+  }
+
   return (
     <>
       {messages?.map(message => {
         return (
           <>
-            <StyledDate key={message._id}>{message.date}:</StyledDate>
+            <StyledDate key={message._id}>{`${getCurrentDate(message.date)} Uhr`}</StyledDate>
             <StyledMessage>{message.msg}</StyledMessage>
           </>
         );
