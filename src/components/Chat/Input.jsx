@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 
-export default function Input({onNewMessage}) {
+export default function Input({onNewMessage, enableFocus}) {
   function handleOnSubmit(e) {
     e.preventDefault();
     const inputValue = e.target.elements[0].value;
@@ -13,6 +13,7 @@ export default function Input({onNewMessage}) {
     <StyledDiv>
       <StyledInputForm onSubmit={handleOnSubmit} id="deleteForm">
         <StyledInput
+          ref={enableFocus}
           autoComplete="off"
           type="text"
           name="message"
@@ -31,14 +32,14 @@ export default function Input({onNewMessage}) {
 const StyledDiv = styled.div`
   text-align: left;
   display: flex;
+  position: fixed;
+  bottom: 52px;
   justify-content: space-between;
   width: 346px;
   height: 45px;
   background: #d9d9d9;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 `;
 
 const StyledInputForm = styled.form`

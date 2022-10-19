@@ -98,3 +98,5 @@ npm run eslint
 ```shell
 npm run lint
 ```
+
+:)
